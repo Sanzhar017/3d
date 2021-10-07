@@ -1,0 +1,126 @@
+h1{
+   
+}
+
+.red{
+	perspective: 1px;
+}
+
+
+.round {
+	width: 100px;
+	height:150px;
+	background: red;
+	-moz-border-radius: 50px;
+	-webkit-border-radius: 50px;
+	border-radius: 50px;
+    transition: 5s;
+	animation: pulsing 5s infinite;
+	animation-direction: reverse;
+	perspective: 1px;
+	border:solid black 7px
+	
+}
+
+
+
+@keyframes pulsing {
+	0%{
+		background-color: grey;
+	}
+	10%{
+		background-color: rgb(74, 188, 216);
+	}
+	20%{
+		background-color: rgb(165, 112, 112);
+	}
+	30%{
+		background-color: rgb(74, 126, 67);
+	}
+	40%{
+		background-color: rgb(35, 43, 150);
+	}
+	50%{
+		background-color: rgb(160, 50, 154);
+		
+	}
+	60%{
+		background-color: rgb(184, 12, 64);
+	}
+	70%{
+		background-color: rgba(100, 33, 100, 0.767);
+	}
+	90%{
+		background-color: rgb(167, 228, 172);
+	}
+	
+}
+
+* {
+	box-sizing: border-box;
+	font-family: 'Oswald', sans-serif;
+	font-family: 'Roboto Condensed', sans-serif;
+}
+
+body {
+  background-color: black;
+  overflow: hidden;
+}
+
+.container {
+	position: relative;
+	margin: 200px auto;
+	width: 300px;
+	height: 300px;
+	perspective: 500px;
+}
+
+.cube {
+	width: inherit;
+	height: inherit;
+	transform-style: preserve-3d;
+}
+
+.side {
+	position: absolute;
+	width: inherit;
+	height: inherit;
+	border: 5px solid #fff;
+	font: normal 70px Arial;
+	text-align: center;
+	line-height: 300px;
+	color: #fff;
+}
+
+.front {
+	transform: translateZ(150px);
+}
+
+.back {
+	transform: rotateY(180deg) translateZ(150px);
+}
+
+.right {
+	transform: rotateY(90deg) translateZ(150px);
+}
+
+.left {
+	transform: rotateY(-90deg) translateZ(150px);
+}
+
+.top {
+	transform: rotateX(90deg) translateZ(150px);
+}
+
+.bottom {
+	transform: rotateX(-90deg) translateZ(150px);
+}
+
+p{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 50px;
+	font-family: 'Oswald', sans-serif;
+	font-family: 'Roboto Condensed', sans-serif;
+}
